@@ -2924,3 +2924,8 @@ body.dark-mode main .lead {
 body.dark-mode .member-photo {
     border-color: #ab83e2; /* Light purple border for dark mode */
 }
+
+.lab-logo-mission {
+    max-width: 400px;
+    height: auto;
+}
