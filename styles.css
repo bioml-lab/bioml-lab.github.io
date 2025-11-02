@@ -2929,3 +2929,28 @@ body.dark-mode .member-photo {
     max-width: 400px;
     height: auto;
 }
+
+/* This styles the form inputs and text areas for dark mode */
+body.dark-mode .form-control {
+    background-color: #1e1e1e; /* A dark background */
+    color: #e0e0e0;           /* Light text */
+    border-color: #555;       /* A visible but dark border */
+}
+
+/* This handles the placeholder text color in dark mode */
+body.dark-mode .form-control::placeholder {
+    color: #888;
+}
+
+/* This ensures that when an input is focused (clicked on), the outline uses the theme color */
+body.dark-mode .form-control:focus {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #ab83e2; /* Use the theme's light purple for the focus outline */
+    box-shadow: 0 0 0 0.25rem rgba(171, 131, 226, 0.25); /* Light purple box shadow */
+}
+
+/* This makes sure the form labels are bright in dark mode */
+body.dark-mode .form-label {
+    color: #e0e0e0;
+}
