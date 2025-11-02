@@ -2916,7 +2916,7 @@ body.dark-mode main .lead {
     width: 180px;      /* Larger size */
     height: 180px;
     object-fit: cover;
-    border-radius: 45%; /* Creates a slight oval or "squircle" */
+    border-radius: 75%; /* Creates a slight oval or "squircle" */
     border: none;      /* Removes the border */
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
