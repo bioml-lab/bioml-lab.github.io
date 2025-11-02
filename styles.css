@@ -2907,3 +2907,19 @@ main .lead {
 body.dark-mode main .lead {
     color: #e0e0e0 !important; /* The correct bright text color */
 }
+
+/* =============================================== */
+/* Custom Styles for Members Page */
+/* =============================================== */
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Prevents images from stretching */
+    border: 3px solid #6f42c1; /* Purple theme border */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .member-photo {
+    border-color: #ab83e2; /* Light purple border for dark mode */
+}
