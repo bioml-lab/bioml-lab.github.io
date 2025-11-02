@@ -43,9 +43,10 @@
                 <div class="text-center mb-4">
                     <p class="lead">Below is a curated list of my publications. For a comprehensive and continuously updated list, including citation metrics, please refer to our official Google Scholar profiles (see <strong>People</strong> tab).</p>
                 </div>
+                <hr>
               
                 <!-- Published & Accepted Section -->
-                <h3 class="mb-4">Published/Accepted</h3>
+                <h3 class="text-center mb-4">Published/Accepted</h3>
                 <div class="publications-list mb-5">
                     <!-- AMR-EnsembleNet -->
                     <div class="publication-item">
@@ -62,6 +63,7 @@
                             </div>
                             <div class="col-md-3 text-md-end">
                                 <div class="publication-links">
+                                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#abstractModal4"><i class="fas fa-align-left"></i> Abstract</button>
                                     <a href="https://www.biorxiv.org/content/early/2025/09/27/2025.09.27.678993" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
                                     <a href="https://github.com/Saiful185/AMR-EnsembleNet" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fab fa-github"></i> Code</a>
                                 </div>
@@ -71,7 +73,7 @@
                 </div>
 
                 <!-- Under Review / Preprints Section -->
-                <h3 class="mb-4">Under Review</h3>
+                <h3 class="text-center mb-4">Under Review</h3>
                 <div class="publications-list">
                     <!-- S3F-Net -->
                     <div class="publication-item">
@@ -88,7 +90,8 @@
                             </div>
                             <div class="col-md-3 text-md-end">
                                 <div class="publication-links">
-                                    <a href="https://arxiv.org/abs/2509.23442" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+                                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#abstractModal2"><i class="fas fa-align-left"></i> Abstract</button>
+                                    <a href="https://arxiv.org/abs/2509.23442" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fas fa-external-link-alt"></i> Preprint</a>
                                     <a href="https://github.com/Saiful185/S3F-Net" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fab fa-github"></i> Code</a>
                                 </div>
                             </div>
@@ -109,7 +112,8 @@
                             </div>
                             <div class="col-md-3 text-md-end">
                                 <div class="publication-links">
-                                    <a href="https://arxiv.org/abs/2509.23454" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+                                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#abstractModal5"><i class="fas fa-align-left"></i> Abstract</button>
+                                    <a href="https://arxiv.org/abs/2509.23454" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fas fa-external-link-alt"></i> Preprint</a>
                                     <a href="https://github.com/Saiful185/AudioFuse" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fab fa-github"></i> Code</a>
                                 </div>
                             </div>
@@ -140,6 +144,43 @@
         </section>
     </main>
 
+    <!-- =============================================== -->
+    <!-- Abstract Modals (Placed at the bottom) -->
+    <!-- =============================================== -->
+    <!-- S3F-Net Abstract -->
+    <div class="modal fade" id="abstractModal2" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header"><h5 class="modal-title">Abstract</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body">
+                    <p>Convolutional Neural Networks (CNNs) have become a cornerstone of medical image analysis due to their proficiency in learning hierarchical spatial features. However, this focus on a single domain is inefficient at capturing global, holistic patterns and fails to explicitly model an image's frequency-domain characteristics. To address these challenges, we propose the Spatial-Spectral Summarizer Fusion Network (S³F-Net), a dual-branch framework that learns from both spatial and spectral representations simultaneously. The S³F-Net performs a fusion of a deep spatial CNN with our proposed shallow spectral encoder, SpectraNet. SpectraNet features the proposed SpectralFilter layer, which leverages the Convolution Theorem by applying a bank of learnable filters directly to an image's full Fourier spectrum via a computation-efficient element-wise multiplication. This allows the SpectralFilter layer to attain a global receptive field instantaneously, with its output being distilled by a lightweight summarizer network. We evaluate S³F-Net across four diverse medical imaging datasets spanning different scales and modalities: HAM10000 (dermoscopy), BUSI (ultrasound), BRISC2025 (MRI), and Chest X-Ray Pneumonia (radiography), to validate its efficacy and generalizability, and reveal the task-dependent nature of the optimal fusion strategy. Our framework consistently and significantly outperforms its strong spatial-only baseline in all cases, with accuracy improvements of up to 5.13%. With a powerful Bilinear Fusion, S³F-Net achieves a state-of-the-art competitive accuracy of 98.76% on the BRISC2025 dataset. A simpler Concatenation Fusion performs better on the texture-dominant Chest X-Ray Pneumonia dataset, achieving 93.11% accuracy, surpassing many top-performing, much deeper models. Our explainability analysis also reveals that the S³F-Net learns to dynamically adjust its reliance on each branch based on the input pathology. These results verify that our dual-domain approach is a powerful and generalizable paradigm for medical image analysis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AMR Abstract -->
+    <div class="modal fade" id="abstractModal4" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header"><h5 class="modal-title">Abstract</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body">
+                    <p>Antimicrobial Resistance (AMR) is a rapidly escalating global health crisis. While genomic sequencing enables rapid prediction of resistance phenotypes, current computational methods have limitations. Standard machine learning models treat the genome as an unordered collection of features, ignoring the sequential context of Single Nucleotide Polymorphisms (SNPs). State-of-the-art sequence models like Transformers are often too data-hungry and computationally expensive for the moderately-sized datasets that are typical in this domain. To address these challenges, we propose AMR-EnsembleNet, an ensemble framework that synergistically combines sequence-based and feature-based learning. We developed a lightweight, custom 1D Convolutional Neural Network (CNN) to efficiently learn predictive sequence motifs from high-dimensional SNP data. This sequence-aware model was ensembled with an XGBoost model, a powerful gradient boosting system adept at capturing complex, non-local feature interactions. We trained and evaluated our framework on a benchmark dataset of 809 E. coli strains, predicting resistance across four antibiotics with varying class imbalance. Our 1D CNN-XGBoost ensemble consistently achieved top-tier performance across all the antibiotics, reaching a Matthews Correlation Coefficient (MCC) of 0.926 for Ciprofloxacin (CIP) and the highest Macro F1-score of 0.691 for the challenging Gentamicin (GEN) AMR prediction. We also show that our model consistently focuses on SNPs within well-known AMR genes like fusA and parC, confirming it learns the correct genetic signals for resistance. Our work demonstrates that fusing a sequence-aware 1D CNN with a feature-based XGBoost model creates a powerful ensemble, overcoming the limitations of using either an order-agnostic or a standalone sequence model.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AudioFuse Abstract -->
+    <div class="modal fade" id="abstractModal5" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header"><h5 class="modal-title">Abstract</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body">
+                    <p>Biomedical audio signals, such as phonocardiograms (PCG), are inherently rhythmic and contain diagnostic information in both their spectral (tonal) and temporal domains. Standard 2D spectrograms provide rich spectral features but compromise the phase information and temporal precision of the 1D waveform. We propose AudioFuse, an architecture that simultaneously learns from both complementary representations to classify PCGs. To mitigate the overfitting risk common in fusion models, we integrate a custom, wide-and-shallow Vision Transformer (ViT) for spectrograms with a shallow 1D CNN for raw waveforms. On the PhysioNet 2016 dataset, AudioFuse achieves a state-of-the-art competitive ROC-AUC of 0.8608 when trained from scratch, outperforming its spectrogram (0.8066) and waveform (0.8223) baselines. Moreover, it demonstrates superior robustness to domain shift on the challenging PASCAL dataset, maintaining an ROC-AUC of 0.7181 while the spectrogram baseline collapses (0.4873). Fusing complementary representations thus provides a strong inductive bias, enabling the creation of efficient, generalizable classifiers without requiring large-scale pre-training.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Footer -->
     <footer class="text-center">
         <div class="container">
